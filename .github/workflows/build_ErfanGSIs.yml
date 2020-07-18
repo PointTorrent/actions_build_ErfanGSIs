@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.7.9/xiaomi.eu_multi_MIMAX3_20.7.9_v12-10.zip
+  ROM_URL: https://mva1.androidfilehost.com/dl/ht2jBVYNABHr2NvQRbJ0EA/1595156024/8889791610682873478/xiaomi.eu_multi_MI6_20.6.18_v12-9.zip
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
@@ -58,10 +58,10 @@ jobs:
               mkdir final
               zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
        
-       - name: Upload GSI to BitSend
+       - name: Upload GSI to CowTransfer
          run: |
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer bit final/GSI.zip
+              curl -sL https://git.io/cowtransfer | sh
+              ./cowtransfer-uploader final/GSI.zip
 
          
             
